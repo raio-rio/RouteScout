@@ -1,8 +1,8 @@
-# Demo Backend (Express + TypeScript)
+# Demo Backend
 
-Use this backend to test the API Scout dashboard locally.
+This sample Express + TypeScript backend is included so you can try Route Scout locally without pointing it at your own API first.
 
-## Run
+## Run The Demo API
 
 ```bash
 cd demo-backend
@@ -10,23 +10,25 @@ npm install
 npm run start
 ```
 
-By default it runs at `http://localhost:3001` with:
+The demo backend runs at `http://localhost:3001`.
 
-- `x-api-key`: `demo-secret`
+Default test header:
 
-## Endpoints
+- `x-api-key: demo-secret`
+
+## Available Endpoints
 
 - `GET /health`
 - `GET /users`
 - `GET /users/:id`
-- `POST /users` (requires `x-api-key`)
-- `PATCH /users/:id` (requires `x-api-key`)
+- `POST /users`
+- `PATCH /users/:id`
 - `GET /slow`
 - `GET /error`
 
-## Start Dashboard
+## Start Route Scout Against The Demo
 
-From repo root:
+From the repository root:
 
 ```bash
 node packages/cli/dist/bin.js dev --project ./demo-backend --base-url http://localhost:3001 --no-open

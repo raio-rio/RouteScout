@@ -9,9 +9,9 @@
     }
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm --clean",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run --passWithNoTests"
+    "build": "node ../../node_modules/tsup/dist/cli-default.js src/index.ts --format esm --clean",
+    "typecheck": "node ../../node_modules/typescript/bin/tsc --noEmit",
+    "test": "node ../../node_modules/vitest/vitest.mjs run --passWithNoTests"
   },
   "dependencies": {
     "@api-scout/core": "0.1.0",

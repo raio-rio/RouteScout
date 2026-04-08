@@ -12,9 +12,9 @@
     }
   },
   "scripts": {
-    "build": "tsup src/index.ts src/bin.ts --format esm --clean",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run --passWithNoTests",
+    "build": "node ../../node_modules/tsup/dist/cli-default.js src/index.ts src/bin.ts --format esm --clean",
+    "typecheck": "node ../../node_modules/typescript/bin/tsc --noEmit",
+    "test": "node ../../node_modules/vitest/vitest.mjs run --passWithNoTests",
     "dev": "npm run build && node dist/bin.js dev --project ../..",
     "scan": "npm run build && node dist/bin.js scan --project ../..",
     "doctor": "npm run build && node dist/bin.js doctor --project ../.."

@@ -2,7 +2,7 @@
   "name": "api-scout-workspace",
   "private": true,
   "version": "0.1.0",
-  "description": "AST-powered API test dashboard for Express and NestJS",
+  "description": "AST-powered backend endpoint scanner and dashboard for Express and NestJS",
   "workspaces": [
     "packages/*"
   ],
@@ -11,11 +11,13 @@
   },
   "scripts": {
     "build": "npm run typecheck && npm run --workspaces --if-present build",
-    "typecheck": "tsc -b --force",
+    "typecheck": "node ./node_modules/typescript/bin/tsc -b --force",
     "test": "npm run --workspaces --if-present test",
-    "dev": "npm --workspace @api-scout/cli run dev",
-    "scan": "npm --workspace @api-scout/cli run scan",
-    "doctor": "npm --workspace @api-scout/cli run doctor"
+    "dev": "npm --workspace api-scout run dev",
+    "scan": "npm --workspace api-scout run scan",
+    "doctor": "npm --workspace api-scout run doctor",
+    "demo:start": "npm --prefix demo-backend run start",
+    "demo:dashboard": "node packages/cli/dist/bin.js dev --project ./demo-backend --base-url http://localhost:3001 --no-open"
   },
   "devDependencies": {
     "@types/node": "^22.18.0",
