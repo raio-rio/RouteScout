@@ -1,0 +1,11 @@
+{
+  "name": "@api-scout/dashboard-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo 'dashboard-web static assets only'",
+    "typecheck": "echo 'dashboard-web static assets only'",
+    "test": "vitest run --passWithNoTests"
+  }
+}

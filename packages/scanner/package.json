@@ -1,0 +1,20 @@
+{
+  "name": "@api-scout/scanner",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@api-scout/core": "0.1.0",
+    "ts-morph": "^26.0.0"
+  }
+}

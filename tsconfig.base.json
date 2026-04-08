@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "baseUrl": ".",
+    "paths": {
+      "@api-scout/core": ["packages/core/src/index.ts"],
+      "@api-scout/core/*": ["packages/core/src/*"],
+      "@api-scout/scanner": ["packages/scanner/src/index.ts"],
+      "@api-scout/scanner/*": ["packages/scanner/src/*"],
+      "@api-scout/dashboard-server": ["packages/dashboard-server/src/index.ts"],
+      "@api-scout/dashboard-server/*": ["packages/dashboard-server/src/*"]
+    },
+    "lib": ["ES2022", "DOM"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"]
+  }
+}
